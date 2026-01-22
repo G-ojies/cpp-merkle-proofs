@@ -1,12 +1,10 @@
-CXX = g++
-CXXFLAGS = -std=c++17 -Wall
+all: merkle_proof merkle_odd
 
-TARGET = merkle_proof
+merkle_proof: merkle_proof.cpp
+	g++ -std=c++17 merkle_proof.cpp -o merkle_proof
 
-all: $(TARGET)
-
-$(TARGET): merkle_proof.cpp
-	$(CXX) $(CXXFLAGS) merkle_proof.cpp -o $(TARGET)
+merkle_odd: merkle_odd.cpp
+	g++ -std=c++17 merkle_odd.cpp -o merkle_odd
 
 clean:
-	rm -f $(TARGET)
+	rm -f merkle_proof merkle_odd
