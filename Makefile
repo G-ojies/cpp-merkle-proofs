@@ -1,18 +1,14 @@
+# Define the compiler and standards
 CXX = g++
 CXXFLAGS = -std=c++17 -Wall
 
-TARGETS = merkle_proof merkle_odd merkle_verify
+# The default target that runs when you type 'make'
+all: MerkleTree
 
-all: $(TARGETS)
+# The build rule
+MerkleTree: MerkleTree.cpp
+	$(CXX) $(CXXFLAGS) MerkleTree.cpp -o MerkleTree
 
-merkle_proof: merkle_proof.cpp
-	$(CXX) $(CXXFLAGS) merkle_proof.cpp -o merkle_proof
-
-merkle_odd: merkle_odd.cpp
-	$(CXX) $(CXXFLAGS) merkle_odd.cpp -o merkle_odd
-
-merkle_verify: merkle_verify.cpp
-	$(CXX) $(CXXFLAGS) merkle_verify.cpp -o merkle_verify
-
+# The clean rule
 clean:
-	rm -f $(TARGETS)
+	rm -f MerkleTree
