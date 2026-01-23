@@ -1,17 +1,29 @@
-# C++ Merkle Proof Generator
+# 🛡️ MerkleTree-Cpp: A Bitcoin-Standard Library
+**Developed by Greyat Labs | Stephen**
 
-A systems-level implementation of **Simplified Payment Verification (SPV)** logic. This tool demonstrates how a Merkle Proof (a "Proof Path") can verify that a specific transaction exists within a block without requiring the full block data.
+A professional C++ implementation of the **Merkle Tree** data structure, specifically optimized to follow the Bitcoin protocol's rules for Simplified Payment Verification (SPV).
 
-### 🚀 Key Features
-- **Merkle Tree Construction:** Recursively hashes transaction pairs to reach a single Merkle Root.
-- **Proof Path Generation:** Identifies the minimum set of sibling hashes needed to reconstruct the root from a single leaf.
-- **Light Client Verification:** Simulates the process used by mobile wallets to verify inclusion using only $O(log_2 N)$ data.
-- **Memory Safety:** Built using modern C++ standards to ensure efficient resource management.
 
-### 🛠 Technical Highlights
-- **Algorithm:** Uses a binary Merkle tree structure.
-- **Efficiency:** Verification complexity is $O(log_2 N)$, where N is the number of transactions.
-- **Language:** Written in pure C++ (Standard 17) with a dedicated Makefile for automated builds.
 
-### 📖 Why this project?
-As part of my preparation for **Summer of Bitcoin 2026**, this project serves as a deep dive into the cryptographic foundations of the Bitcoin protocol, specifically focusing on how the network maintains trust and efficiency for non-full-node participants.
+## 🚀 Key Features
+- **Bitcoin Compliance:** Implements the specific "last-hash duplication" rule for blocks with an odd number of transactions.
+- **SPV Verification:** Includes a logarithmic-time ($O(log_2 N)$) verification function for light client transaction proof.
+- **Unified Class Architecture:** Refactored from procedural scripts into a clean, reusable C++ class for better scalability.
+- **Interoperability:** Includes a Python bridge (`merkle_bridge.py`) for automated testing and scripting.
+
+## 🛠️ Installation & Usage
+Ensure you have `g++` and `make` installed on your Linux system.
+
+```bash
+# Clone the repository
+git clone [https://github.com/G-ojies/cpp-merkle-proofs.git](https://github.com/G-ojies/cpp-merkle-proofs.git)
+cd cpp-merkle-proofs
+
+# Build the library
+make
+
+# Run the C++ example
+./MerkleTree
+
+# Run the Python test bridge
+python3 merkle_bridge.py
