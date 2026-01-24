@@ -27,3 +27,6 @@ make
 
 # Run the Python test bridge
 python3 merkle_bridge.py
+make
+## 🌐 Protocol Context: BIP-37
+This library implements the mathematical foundation of **BIP-37 (Bloom Filters for SPV)**. While BIP-37 manages how Light Clients request data privately, the `MerkleTree` class provided here handles the actual construction of the **MerkleBlock** messages sent by Full Nodes to satisfy those requests.
