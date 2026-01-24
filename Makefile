@@ -1,14 +1,13 @@
-# Define the compiler and standards
 CXX = g++
 CXXFLAGS = -std=c++17 -Wall
 
-# The default target that runs when you type 'make'
-all: MerkleTree
+all: MerkleTree bloom_filter
 
-# The build rule
 MerkleTree: MerkleTree.cpp
 	$(CXX) $(CXXFLAGS) MerkleTree.cpp -o MerkleTree
 
-# The clean rule
+bloom_filter: bloom_filter.cpp
+	$(CXX) $(CXXFLAGS) bloom_filter.cpp -o bloom_filter
+
 clean:
-	rm -f MerkleTree
+	rm -f MerkleTree bloom_filter
