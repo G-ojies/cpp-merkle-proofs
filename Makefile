@@ -1,7 +1,9 @@
 CXX = g++
 CXXFLAGS = -std=c++17 -Wall
 
-all: MerkleTree bloom_filter
+TARGETS = MerkleTree bloom_filter script_debugger
+
+all: $(TARGETS)
 
 MerkleTree: MerkleTree.cpp
 	$(CXX) $(CXXFLAGS) MerkleTree.cpp -o MerkleTree
@@ -9,5 +11,8 @@ MerkleTree: MerkleTree.cpp
 bloom_filter: bloom_filter.cpp
 	$(CXX) $(CXXFLAGS) bloom_filter.cpp -o bloom_filter
 
+script_debugger: script_debugger.cpp
+	$(CXX) $(CXXFLAGS) script_debugger.cpp -o script_debugger
+
 clean:
-	rm -f MerkleTree bloom_filter
+	rm -f $(TARGETS)
