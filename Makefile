@@ -1,7 +1,7 @@
 CXX = g++
 CXXFLAGS = -std=c++17 -Wall
 
-TARGETS = MerkleTree bloom_filter script_debugger
+TARGETS = MerkleTree bloom_filter script_debugger wif_converter
 
 all: $(TARGETS)
 
@@ -13,6 +13,9 @@ bloom_filter: bloom_filter.cpp
 
 script_debugger: script_debugger.cpp
 	$(CXX) $(CXXFLAGS) script_debugger.cpp -o script_debugger
+
+wif_converter: wif_converter.cpp
+	$(CXX) $(CXXFLAGS) wif_converter.cpp -o wif_converter
 
 clean:
 	rm -f $(TARGETS)
