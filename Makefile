@@ -1,7 +1,7 @@
 CXX = g++
 CXXFLAGS = -std=c++17 -Wall
 
-TARGETS = MerkleTree bloom_filter script_debugger wif_converter bitcoin_crypto
+TARGETS = MerkleTree bloom_filter script_debugger bitcoin_wif_lib
 
 all: $(TARGETS)
 
@@ -14,11 +14,8 @@ bloom_filter: bloom_filter.cpp
 script_debugger: script_debugger.cpp
 	$(CXX) $(CXXFLAGS) script_debugger.cpp -o script_debugger
 
-wif_converter: wif_converter.cpp
-	$(CXX) $(CXXFLAGS) wif_converter.cpp -o wif_converter
-
-bitcoin_crypto: bitcoin_crypto.cpp
-	$(CXX) $(CXXFLAGS) bitcoin_crypto.cpp -o bitcoin_crypto
+bitcoin_wif_lib: bitcoin_wif_lib.cpp
+	$(CXX) $(CXXFLAGS) bitcoin_wif_lib.cpp -o bitcoin_wif_lib
 
 clean:
 	rm -f $(TARGETS)
