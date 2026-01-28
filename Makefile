@@ -1,21 +1,12 @@
 CXX = g++
-CXXFLAGS = -std=c++17 -Wall
+CXXFLAGS = -std=c++17 -Wall -pthread
 
-TARGETS = MerkleTree bloom_filter script_debugger bitcoin_wif_lib
+TARGETS = MerkleTree bloom_filter script_debugger wif_converter vanity_searcher_mt
 
 all: $(TARGETS)
 
-MerkleTree: MerkleTree.cpp
-	$(CXX) $(CXXFLAGS) MerkleTree.cpp -o MerkleTree
-
-bloom_filter: bloom_filter.cpp
-	$(CXX) $(CXXFLAGS) bloom_filter.cpp -o bloom_filter
-
-script_debugger: script_debugger.cpp
-	$(CXX) $(CXXFLAGS) script_debugger.cpp -o script_debugger
-
-bitcoin_wif_lib: bitcoin_wif_lib.cpp
-	$(CXX) $(CXXFLAGS) bitcoin_wif_lib.cpp -o bitcoin_wif_lib
+vanity_searcher_mt: vanity_searcher_mt.cpp
+	$(CXX) $(CXXFLAGS) vanity_searcher_mt.cpp -o vanity_searcher_mt
 
 clean:
 	rm -f $(TARGETS)
