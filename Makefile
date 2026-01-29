@@ -1,12 +1,12 @@
 CXX = g++
 CXXFLAGS = -std=c++17 -Wall -pthread
 
-TARGETS = MerkleTree bloom_filter script_debugger wif_converter vanity_searcher_mt vanity_benchmarker
+TARGETS = MerkleTree bloom_filter script_debugger wif_converter vanity_benchmarker tx_parser
 
 all: $(TARGETS)
 
-vanity_benchmarker: vanity_benchmarker.cpp
-	$(CXX) $(CXXFLAGS) vanity_benchmarker.cpp -o vanity_benchmarker
+tx_parser: tx_parser.cpp
+	$(CXX) $(CXXFLAGS) tx_parser.cpp -o tx_parser
 
 clean:
 	rm -f $(TARGETS)
