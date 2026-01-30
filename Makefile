@@ -1,12 +1,12 @@
 CXX = g++
 CXXFLAGS = -std=c++17 -Wall -pthread
 
-TARGETS = MerkleTree bloom_filter script_debugger wif_converter vanity_benchmarker tx_parser varint_decoder
+TARGETS = MerkleTree bloom_filter script_debugger wif_converter vanity_benchmarker tx_parser varint_decoder tx_analyzer
 
 all: $(TARGETS)
 
-varint_decoder: varint_decoder.cpp
-	$(CXX) $(CXXFLAGS) varint_decoder.cpp -o varint_decoder
+tx_analyzer: tx_analyzer.cpp
+	$(CXX) $(CXXFLAGS) tx_analyzer.cpp -o tx_analyzer
 
 clean:
 	rm -f $(TARGETS)
