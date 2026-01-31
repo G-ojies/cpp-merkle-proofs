@@ -1,4 +1,10 @@
-# 🛡️ MerkleTree-Cpp: A Bitcoin-Standard Library
+## 🎓 Certifications
+- [cite_start]**CS120: Bitcoin for Developers I** - Saylor Academy [cite: 4, 12]
+  - [cite_start]**Grade:** 100% [cite: 17]
+  - [cite_start]**Issue Date:** January 31, 2026 [cite: 5, 13]
+  - [cite_start]**Topics:** Bitcoin Protocol, Cryptography, Scripting, and Network Consensus [cite: 4, 12]
+
+  # 🛡️ MerkleTree-Cpp: A Bitcoin-Standard Library
 **Developed by Greyat Labs | Stephen**
 
 A professional C++ implementation of the **Merkle Tree** data structure, specifically optimized to follow the Bitcoin protocol's rules for Simplified Payment Verification (SPV).
