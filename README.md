@@ -1,8 +1,8 @@
 ## 🎓 Certifications
-- **CS120: Bitcoin for Developers I** - Saylor Academy [cite: 4, 12]
-  **Grade:** 100% [cite: 17]
-  **Issue Date:** January 31, 2026 [cite: 5, 13]
-  **Topics:** Bitcoin Protocol, Cryptography, Scripting, and Network Consensus [cite: 4, 12]
+- **CS120: Bitcoin for Developers I** - Saylor Academy 
+  - **Grade:** 100% 
+  - **Issue Date:** January 31, 2026 
+  - **Topics:** Bitcoin Protocol, Cryptography, Scripting, and Network Consensus 
 
   # 🛡️ MerkleTree-Cpp: A Bitcoin-Standard Library
 **Developed by Greyat Labs | Stephen**
