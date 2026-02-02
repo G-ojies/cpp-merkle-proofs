@@ -39,3 +39,12 @@ This library implements the mathematical foundation of **BIP-37 (Bloom Filters f
 
 ## 🧪 Automated Testing
 Run `./spv_workflow.sh` to simulate a full SPV cycle from Bloom Filter lookup to Merkle Root verification.
+
+## Example Usage
+You can run the tool with real-world Bitcoin Transaction IDs to verify the Merkle Root calculation.
+
+### Even Set (4 Transactions)
+`./MerkleTree f4184fc596403b9d638783cf57adfe4c75c605f6356fbc91338530e9831e9e16 6cd9ff242a04dbb6b0683c2b8576c397f341b7f0c1747b206f878db597a4cd01 8c14f0db3df150123e6f3dbbf30f8b955a8249b62ac1d1ff16284aefa3d06d87 f66f6ab609d242edf266782139ddd6214777c4e5080f017d15cb9aa431dda351`
+
+### Odd Set (5 Transactions - Testing Duplication Logic)
+`./MerkleTree f4184fc596403b9d638783cf57adfe4c75c605f6356fbc91338530e9831e9e16 6cd9ff242a04dbb6b0683c2b8576c397f341b7f0c1747b206f878db597a4cd01 8c14f0db3df150123e6f3dbbf30f8b955a8249b62ac1d1ff16284aefa3d06d87 f66f6ab609d242edf266782139ddd6214777c4e5080f017d15cb9aa431dda351 50ba87bdd484f07c8c55f76a22982f987c0465fdc345381b4634a70dc0ea0b38`
