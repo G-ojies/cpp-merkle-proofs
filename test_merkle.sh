@@ -1,0 +1,5 @@
+#!/bin/bash
+echo "Running Merkle Root Tests..."
+# Test case with 4 hashes
+./MerkleTree f4184fc596403b9d638783cf57adfe4c75c605f6356fbc91338530e9831e9e16 6cd9ff242a04dbb6b0683c2b8576c397f341b7f0c1747b206f878db597a4cd01 8c14f0db3df150123e6f3dbbf30f8b955a8249b62ac1d1ff16284aefa3d06d87 f66f6ab609d242edf266782139ddd6214777c4e5080f017d15cb9aa431dda351
+echo "Test Completed."
