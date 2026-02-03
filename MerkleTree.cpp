@@ -36,3 +36,12 @@ int main() {
     std::cout << "Merkle Root: " << root << std::endl;
     return 0;
 }
+
+/**
+ * @brief Computes the double-SHA256 hash of a string.
+ * @param input The string to be hashed.
+ * @return A hex string representing the double-SHA256 hash.
+ */
+std::string doubleSHA256(std::string input) {
+    // Your existing logic here
+}
