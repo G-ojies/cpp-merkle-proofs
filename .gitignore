@@ -1,0 +1,17 @@
+cat <<EOF > .gitignore
+# Compiled binaries
+MerkleTree
+bloom_filter
+script_debugger
+wif_converter
+vanity_benchmarker
+tx_parser
+varint_decoder
+header_parser
+difficulty_calc
+reward_calc
+
+# Build artifacts
+*.o
+*.out
+EOF
