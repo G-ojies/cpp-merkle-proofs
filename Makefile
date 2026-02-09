@@ -5,12 +5,12 @@ TARGETS = MerkleTree bloom_filter script_debugger wif_converter vanity_benchmark
           tx_parser varint_decoder tx_analyzer bit_visualizer header_parser \
           difficulty_calc reward_calc block_hasher pow_validator miner_mt \
           miner_perf merkle_verify mempool_sorter header_assembler \
-          coinbase_gen block_template_gen pubkey_hasher
+          coinbase_gen block_template_gen pubkey_hasher address_encoder
 
 all: $(TARGETS)
 
-pubkey_hasher: pubkey_hasher.cpp
-	$(CXX) $(CXXFLAGS) pubkey_hasher.cpp -o pubkey_hasher
+address_encoder: address_encoder.cpp
+	$(CXX) $(CXXFLAGS) address_encoder.cpp -o address_encoder
 
 clean:
 	rm -f $(TARGETS)
