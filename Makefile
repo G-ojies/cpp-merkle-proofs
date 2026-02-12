@@ -7,12 +7,13 @@ TARGETS = MerkleTree bloom_filter script_debugger wif_converter vanity_benchmark
           miner_perf merkle_verify mempool_sorter header_assembler \
           coinbase_gen block_template_gen pubkey_hasher address_encoder \
           bech32_encoder multisig_gen fee_estimator timelock_gen \
-          script_stack_sim rbf_simulator coinjoin_sim p2p_handshake inv_handler
+          script_stack_sim rbf_simulator coinjoin_sim p2p_handshake \
+          inv_handler peer_reputation
 
 all: $(TARGETS)
 
-inv_handler: inv_handler.cpp
-	$(CXX) $(CXXFLAGS) inv_handler.cpp -o inv_handler
+peer_reputation: peer_reputation.cpp
+	$(CXX) $(CXXFLAGS) peer_reputation.cpp -o peer_reputation
 
 clean:
 	rm -f $(TARGETS)
