@@ -8,12 +8,12 @@ TARGETS = MerkleTree bloom_filter script_debugger wif_converter vanity_benchmark
           coinbase_gen block_template_gen pubkey_hasher address_encoder \
           bech32_encoder multisig_gen fee_estimator timelock_gen \
           script_stack_sim rbf_simulator coinjoin_sim p2p_handshake \
-          inv_handler peer_reputation
+          inv_handler peer_reputation p2sh_gen
 
 all: $(TARGETS)
 
-peer_reputation: peer_reputation.cpp
-	$(CXX) $(CXXFLAGS) peer_reputation.cpp -o peer_reputation
+p2sh_gen: p2sh_gen.cpp
+	$(CXX) $(CXXFLAGS) p2sh_gen.cpp -o p2sh_gen
 
 clean:
 	rm -f $(TARGETS)
