@@ -8,12 +8,13 @@ TARGETS = MerkleTree bloom_filter script_debugger wif_converter vanity_benchmark
           coinbase_gen block_template_gen pubkey_hasher address_encoder \
           bech32_encoder multisig_gen fee_estimator timelock_gen \
           script_stack_sim rbf_simulator coinjoin_sim p2p_handshake \
-          inv_handler peer_reputation p2sh_gen utxo_auditor utxo_visualizer
+          inv_handler peer_reputation p2sh_gen utxo_auditor \
+          utxo_visualizer merkle_prover
 
 all: $(TARGETS)
 
-utxo_visualizer: utxo_visualizer.cpp
-	$(CXX) $(CXXFLAGS) utxo_visualizer.cpp -o utxo_visualizer
+merkle_prover: merkle_prover.cpp
+	$(CXX) $(CXXFLAGS) merkle_prover.cpp -o merkle_prover
 
 clean:
 	rm -f $(TARGETS)
