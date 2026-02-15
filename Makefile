@@ -9,12 +9,12 @@ TARGETS = MerkleTree bloom_filter script_debugger wif_converter vanity_benchmark
           bech32_encoder multisig_gen fee_estimator timelock_gen \
           script_stack_sim rbf_simulator coinjoin_sim p2p_handshake \
           inv_handler peer_reputation p2sh_gen utxo_auditor \
-          utxo_visualizer merkle_prover
+          utxo_visualizer merkle_prover rich_list
 
 all: $(TARGETS)
 
-merkle_prover: merkle_prover.cpp
-	$(CXX) $(CXXFLAGS) merkle_prover.cpp -o merkle_prover
+rich_list: rich_list.cpp
+	$(CXX) $(CXXFLAGS) rich_list.cpp -o rich_list
 
 clean:
 	rm -f $(TARGETS)
