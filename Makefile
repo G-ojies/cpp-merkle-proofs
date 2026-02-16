@@ -9,12 +9,13 @@ TARGETS = MerkleTree bloom_filter script_debugger wif_converter vanity_benchmark
           bech32_encoder multisig_gen fee_estimator timelock_gen \
           script_stack_sim rbf_simulator coinjoin_sim p2p_handshake \
           inv_handler peer_reputation p2sh_gen utxo_auditor \
-          utxo_visualizer merkle_prover rich_list fee_heatmap mnemonic_gen
+          utxo_visualizer merkle_prover rich_list fee_heatmap mnemonic_gen \
+          child_key_derivation
 
 all: $(TARGETS)
 
-mnemonic_gen: mnemonic_gen.cpp
-	$(CXX) $(CXXFLAGS) mnemonic_gen.cpp -o mnemonic_gen
+child_key_derivation: child_key_derivation.cpp
+	$(CXX) $(CXXFLAGS) child_key_derivation.cpp -o child_key_derivation
 
 clean:
 	rm -f $(TARGETS)
